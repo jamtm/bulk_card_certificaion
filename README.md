@@ -34,8 +34,11 @@ From this link: https://app.domo.com/labs/java-sdk/latest/domoUtil.jar and place
 
 ### 3. Edit and populate the 'config.ini' file.
 Open up the config.ini file with a text editor and populate the variables with the information you gathered in steps 1 and 2.
+
 domo_instance is the URL you use to log in to Domo (excluding the '.domo.com' part)
+
 ceertification_id is the GUID of the certification path from step 2
+
 card_list_dataset_id is the GUID of your dataset containing cards to cetify.
 
 #### Example Config.ini file:
@@ -67,7 +70,10 @@ python certify.py -h
 ```
 
 The script contains 2 functions, one to submit the cards for certification and one to approve.
+
 Only the card owner may submit the cards for approval and only the next person in the approval chain may approve them. The script uses username and password authentication, since this a requirement for using the certification process within Domo.
+
+You will be prompted for your Domo user password once one of the functions detailed below have been invoked. 
 
 To submit all cards in the dataset for approval execute the following, where the email address is the email you use to log in to Domo.
 ```
@@ -82,7 +88,7 @@ python certify.py --function approve_certification firstname.secondname@companyn
 ```
 
 ## Notes
-- The script will create an write out each step it performs to a process.log file. This will be replaced upon each execution of the script.
+- The script will create and write out each step it performs to a process.log file. This will be replaced upon each execution of the script.
 
 - While the script runs it will create a number of local temporary files and will execute the CLI Utility a number of times. All temporary files will be removed at the end of its execution.
 
