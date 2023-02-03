@@ -82,9 +82,11 @@ python certify.py --function approve_certification firstname.secondname@companyn
 ```
 
 ## Notes
-The script will create an write out each step it performs to a process.log file. This will be replaced upon each execution of the script.
-While the script runs it will create a number of local temporary files and will execute the CLI Utility a number of times. All temporary files will be removed at the end of its execution. 
-The script can approve up to 10,000 cards per execution. 
+- The script will create an write out each step it performs to a process.log file. This will be replaced upon each execution of the script.
+
+- While the script runs it will create a number of local temporary files and will execute the CLI Utility a number of times. All temporary files will be removed at the end of its execution.
+
+- The script can approve up to 10,000 cards per execution. 
 
 
 
